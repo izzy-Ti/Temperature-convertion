@@ -1,23 +1,23 @@
-let deg=document.getElementById(`temp`);
-let far=document.getElementById(`tof`);
-let cal=document.getElementById(`toc`);
-let par=document.getElementById(`par`);
-let ans;
+let degree=document.getElementById(`number_input`);
+let fahrenheit=document.getElementById(`to_fahrenheit`);
+let celsius=document.getElementById(`to_celsius`);
+let paragraph=document.getElementById(`answer_line`);
+let answer;
 
 function convert(){
     
-    if(far.checked){
-        ans=Number(deg.value);
-        ans= ans * 9 / 5 + 32;  
-        par.textContent=`F= ${ans.toFixed(2)}`;
+    if(fahrenheit.checked){
+        answer=Number(degree.value);
+        answer= answer * 9 / 5 + 32;  
+        paragraph.textContent=`F= ${answer.toFixed(2)}`;
     }
-    else if(cal.checked){
-        ans=Number(deg.value);
-        ans= (ans-32) * (5 / 9);
-        par.textContent=`C= ${ans.toFixed(2)}`;
+    else if(celsius.checked){
+        answer=Number(degree.value);
+        answer= (answer-32) * (5 / 9);
+        paragraph.textContent=`C= ${answer.toFixed(2)}`;
     }
     else{
-        par.textContent=`Please select a unit`;
+        paragraph.textContent=`Please select a unit`;
     }
 }
 
